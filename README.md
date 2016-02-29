@@ -31,7 +31,7 @@ var foods = htag('ul', item1 + item2 + item3, {'id':'food-list'});
 
 // Note foods takes an expression as the second argument for it's content.
 ```
-You can also create multiple elements by passing an array in as content. You can then nest those elements into another htag. Now instead of 14 lines of code, you have 2 unleashing the power of htag's. 
+You can also create multiple elements at the same time by passing an array in as content. You can then nest those elements into another htag. Now instead of 14 lines of code, you have 2 unleashing the power of htag's. 
 ```javascript
 var items = htag('li',['orange', 'apple', 'banana'], {'class':'no-bullet'});
 var foods = htag('ul', items, {'id':'food-list'});
