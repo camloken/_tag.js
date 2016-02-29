@@ -24,24 +24,24 @@ var hello = htag('h1', 'Hello World!', {'style':'font-family: "Arial", sans-seri
 ### Nesting
 Below is an example of nesting htags into other htags. This uses 4 lines of code instead of 14 lines of javascript.
 ```javascript
-var item1 = htag('li','orange', {'class':'no-bullet'});
-var item2 = htag('li','apple', {'class':'no-bullet'});
-var item3 = htag('li','banana', {'class':'no-bullet'});
+var item1 = htag('li','Orange', {'class':'no-bullet'});
+var item2 = htag('li','Apple', {'class':'no-bullet'});
+var item3 = htag('li','Banana', {'class':'no-bullet'});
 var foods = htag('ul', item1 + item2 + item3, {'id':'food-list'});
 
 // Note foods takes an expression as the second argument for it's content.
 ```
 You can also create multiple elements at the same time by passing an array in as content. You can then nest those elements into another htag. Now instead of 14 lines of code, you have 2 unleashing the power of htag's. 
 ```javascript
-var items = htag('li',['orange', 'apple', 'banana'], {'class':'no-bullet'});
+var items = htag('li',['Orange', 'Apple', 'Banana'], {'class':'no-bullet'});
 var foods = htag('ul', items, {'id':'food-list'});
 ```
 Here is the output:
 ```html
 <ul id="food-list">
-   <li class="no-bullet">orange</li>
-   <li class="no-bullet">orange</li>
-   <li class="no-bullet">orange</li>
+   <li class="no-bullet">Orange</li>
+   <li class="no-bullet">Apple</li>
+   <li class="no-bullet">Banana</li>
 </ul>
 ```
 
