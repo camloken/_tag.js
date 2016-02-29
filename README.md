@@ -7,10 +7,11 @@ The htag() function takes 3 arguments -- htag( htmlElement, content, attributes 
 var hello = htag('h1', 'Hello World!');
 document.body.appendChild( hello );
 ```
-You can also attach any attribute you want. The attribute argument must be an object and 'key':'values' should be strings or variables. Here's an example:
+You can also attach any attribute you want. The attribute argument must be an object and 'key':'values' should be strings or variables. Here's an example (Note: data-id is set to a variable):
 ```sh
-var button = htag('button', 'Submit', {'class':'jumbo-btn', 'data-id': productId } ); // Note: data-id is set to a variable
-document.body.appendChild( button );
+var form = document.getElementById('form');
+var button = htag('button', 'Submit', {'class':'jumbo-btn', 'data-id': productId } ); 
+form.appendChild( button );
 ```
 The style attibute is also valid:
 ```sh
