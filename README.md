@@ -12,7 +12,9 @@ document.body.appendChild( hello );
 You can attach any attribute you want. The attribute argument takes an object and 'key':'values' should be strings or variables. Here's an example:
 ```javascript
 var button = htag('button', 'Submit', {'class':'jumbo-btn', 'data-id': productId } );
-// Note: data-id takes a variable. The key 'data-id' must be a string as it contains a hyphen.
+
+// Note: data-id takes a variable.
+// The key 'data-id' must be a string as it contains a hyphen.
 ```
 The style attibute is also valid:
 ```javascript
