@@ -19,7 +19,7 @@ var button = htag('button', 'Submit', {'class':'jumbo-btn', 'data-id': productId
 ```
 Set a containers content to empty using null or an empty string "" and append content to it later.
 ```javascript
-var button = htag('table', null, {'class':'data-table'} );
+var dataTable = htag('table', null, {'class':'data-table'} );
 ```
 
 The style attibute is also valid, but as a best practice you should use a class or id.
