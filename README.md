@@ -1,5 +1,5 @@
 # htag.js
-A lightweight, shorthand tool for creating, and wrapping multiple html elements. Powerful and flexible, htag.js let's you create data-rich components and templates with ease. It is especially useful when repeating large data sets and was build with speed in mind. The htag( ) function returns a document fragment which you can append to any HTML element.
+A lightweight tool for creating, and wrapping html elements. Create data-rich components and templates with ease. It is especially useful when repeating large data sets and was build for speed. The htag( ) function returns a document fragment which you can append to any HTML element.
 
 ### Basic Usage
 The htag( ) function takes 3 arguments -- htag( htmlElement, content, attributes ). Content and attributes are optional. The content argument can be a string, number, variable, expession, array or even an other htag ( more on that later ).
@@ -17,6 +17,11 @@ var button = htag('button', 'Submit', {'class':'jumbo-btn', 'data-id': productId
 // Note: data-id value is set to a variable called productId.
 // The key named 'data-id' must be a string as it contains a hyphen.
 ```
+Set a containers content to empty using null or an empty string "" and append content to it later.
+```javascript
+var button = htag('table', null, {'class':'data-table'} );
+```
+
 The style attibute is also valid, but as a best practice you should use a class or id.
 ```javascript
 var hello = htag('h1', 'Hello World!', {'style':'font-family: "Arial", sans-serif; color:red'} );
