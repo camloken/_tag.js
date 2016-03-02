@@ -32,6 +32,7 @@ var foods = _tag('ul', item1 + item2 + item3, {'id':'food-list'});
 ```
 > Note: foods takes an expression as the second parameter for it's content.
 
+### Nesting and Looping
 You can also create multiple elements at the same time by passing an array in as content. You can then nest those elements into another _tag. Now instead of 14 lines of code, you have 2 unleashing the power of _tag's. 
 ```javascript
 var items = _tag('li',['Orange', 'Apple', 'Banana'], {'class':'no-bullet'});
