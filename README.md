@@ -45,4 +45,4 @@ Here is the output:
    <li class="no-bullet">Banana</li>
 </ul>
 ```
-
+If you're still not conviced that _tag.js can save you time developing, look at the demo.html file for a powerful working example of what it is capable of.
