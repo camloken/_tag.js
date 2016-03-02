@@ -1,5 +1,5 @@
 # _tag.js
-A lightweight tool for creating, and wrapping html elements. Create data-rich components and templates with ease. It is especially useful when repeating large data sets and was build for speed. The _tag( ) function returns a document fragment which you can append to any HTML element.
+A lightweight tool for creating, and wrapping html elements. Create data-rich components and templates with ease. It is especially useful when repeating large data sets and was build for speed.
 
 ### Basic Usage
 The _tag( ) function takes 3 parameters, for example _tag( element, content, attributes ). The content and attributes parameters are optional. The content parameter can be a string, number, variable, expession, array or even an other _tag ( more on that later ).
