@@ -6,8 +6,9 @@ The _tag( ) function takes 3 parameters, for example _tag( element, content, att
 ```javascript
 var hello = _tag('h1', 'Hello World!');
 document.body.appendChild( hello );
+
+// DO NOT USE: document.body.innerHTML = hello; USE: appendChild( );
 ```
-> **DO NOT USE:** document.body.innerHTML = hello; ** USE:** appendChild( );
 
 You can attach any attribute you want. The attribute parameter takes an object. The {'key':'value'} pairs should be strings or variables. Here's an example:
 ```javascript
