@@ -12,14 +12,13 @@ You can attach any attribute you want. The attribute parameter takes an object. 
 ```javascript
 var button = _tag('button', 'Submit', {'class':'jumbo-btn', 'data-id': productId } );
 ```
-> Note: data-id is set to a variable called productId. The key 'data-id' must be a string as it contains a hyphen.
 
 Set a containers content to empty using null or an empty string "" and append content to it later.
 ```javascript
 var dataTable = _tag('table', null, {'class':'data-table'} );
 ```
 
-The style attibute is also valid, but as a best practice you should use a class or id.
+The style attibute is also valid, but as a best practice you should always use a class or id.
 ```javascript
 var hello = _tag('h1', 'Hello World!', {'style':'font-family: "Arial", sans-serif; color:red'} );
 ```
