@@ -23,7 +23,6 @@
 	.then( function( data ){ return data.json() })
 	.then( function( json ){ showPeople( json ) })
 	.catch( function( err ){ throw err.name+': '+err.message });
-	var arr = _tag('div', [1,2,3,4,5] );
 
 	function showPeople( p ){
 		// 18 lines of code used here instead of 65 lines of pure javascript
@@ -44,6 +43,7 @@
 		}
 
 		content.appendChild( table );
+		
 		var t1 = performance.now();
 		var time = (t1 - t0).toFixed(2);
 		document.getElementById('num').innerHTML = ' ( returned '+i+' rows in '+ time +' ms )';
