@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<title>_tag Test</title>
+	<meta name="author" content="Cameron Loken">
+	<link rel="stylesheet" href="demo.css">
+</head>
+<body>
+	<h2>Test _tag.js speed: <small id="num"></small></h2>
+	<div id="content"></div>
+</body>
+
+<script type="text/javascript" src="fetch.js"></script>
+<script type="text/javascript" src="_tag.js"></script>
+<script type="text/javascript">
+	var t0 = performance.now();
+	var content = document.getElementById('content');
+	var people = [];
+	var peopleUrl = 'people.json';
+
+	fetch( peopleUrl, { method:'GET' })
+	.then( function( data ){ return data.json() })
+	.then( function( json ){ showPeople( json ) })
+	.catch( function( err ){ throw err.name+': '+err.message });
+
+	function showPeople( p ){
+		// 18 lines of code used here instead of 65 lines of pure javascript
+		
+		var table = _tag('table', null, { 'class': 'my-table' });
+		var th = _tag('th', [ 'Id' ,'Name', 'Age', 'Email', 'Phone', 'Balance', 'Eye Color', 'Friends' ]);
+		var thead = _tag('tr', th );
+		table.appendChild( thead );
+
+		var i;
+		for ( i = 0; i < p.length; i++ ) {
+			var name = _tag('span', p[i].name, {'class':'bold'});
+			var cell = _tag('td',
+				[ i+1, name, p[i].age, p[i].email, p[i].phone, p[i].balance, p[i].eyeColor, p[i].friends.join(', ') ],
+				{ 'class':'cell' } );
+			var row = _tag('tr', cell, { 'id': p[i]._id, 'data-guid': p[i].guid });
+			table.appendChild( row );
+		}
+
+		content.appendChild( table );
+		
+		var t1 = performance.now();
+		var time = (t1 - t0).toFixed(2);
+		document.getElementById('num').innerHTML = ' ( returned '+i+' rows in '+ time +' ms )';
+	}
+
+</script>
+
+</html>
+
