@@ -13,7 +13,7 @@ You can attach any attribute you want. The attribute parameter takes an object. 
 var button = _tag('button', 'Submit', {'class':'jumbo-btn', 'data-id': productId } );
 ```
 
-Set a containers content to empty using null or an empty string "" and append content to it later.
+The content parameter can be set to null or an empty string "". Content  can be appened to it later.
 ```javascript
 var dataTable = _tag('table', null, {'class':'data-table'} );
 ```
