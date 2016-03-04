@@ -1,0 +1,46 @@
+html, html * *:before, *:after{
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+html, body {
+	line-height: 1.6;
+	letter-spacing: 0.05rem;
+	height: 100vh;
+}
+body {
+	font-family: 'Noto Sans', Arial, sans-serif;
+	background-color: #333;
+	
+}
+h1, h2, h3, h4, h5, h6 {
+	font-weight: lighter;
+}
+h1 { font-size: 2.4rem }
+h2 { font-size: 2.1rem }
+h3 { font-size: 1.9rem }
+h4 { font-size: 1.6rem }
+h5 { font-size: 1.3rem }
+h6 { font-size: 1rem }
+
+.header {
+	position: relative;
+	background-color: #7322B0;
+	padding: 13px 0 19px;
+	text-align: center;
+	color: rgba(255,255,255,0.9);
+}
+.content {
+	position: relative;
+	height: calc(100vh - 95px);
+	text-align: center;
+	color: rgba(255,255,255,0.75);
+	transform-style: preserve-3d;
+	
+}
+.intro {
+	position: relative;
+	margin: 0 auto;
+	top: 50%;
+	width: 500px;
+	transform: translate3d(0,-50%,0);
+}
