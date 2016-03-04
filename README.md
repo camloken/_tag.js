@@ -22,7 +22,7 @@ The style attibute is also valid, but as a best practice you should always use a
 ```javascript
 var hello = _tag('h1', 'Hello World!', {'style':'font-family: "Arial", sans-serif; color:red'} );
 ```
-### Nesting
+### Nesting Tags
 Below is an example of nesting _tags into other _tags. This uses 4 lines of code instead of 14 lines of javascript.
 ```javascript
 var item1 = _tag('li','Orange', {'class':'no-bullet'});
@@ -32,7 +32,7 @@ var foods = _tag('ul', item1 + item2 + item3, {'id':'food-list'});
 ```
 > Note: foods takes an expression as the second parameter for it's content.
 
-### Nesting and Looping
+### Creating and Nesting Mutiple Tags
 You can also create multiple elements at the same time by passing an array in as content. You can then nest those elements into another _tag. Now instead of 14 lines of code, you have 2 lines. 
 ```javascript
 var items = _tag('li',['Orange', 'Apple', 'Banana'], {'class':'no-bullet'});
