@@ -32,8 +32,17 @@ var foods = _tag('ul', item1 + item2 + item3, {'id':'food-list'});
 ```
 > Note: foods takes an expression as the second parameter for it's content.
 
+### Nesting Tags with Strings
+It is important to note that while you can nest multiple tags, mixing tags with strings requires a little extra work. The _tag( ) function returns a HTML object, so in order to concatenate it with a string, you need to convert the tag object to a string. Note in the example below, we are converting the tag object into a string using the outerHTML method.
+```javascript
+var name = _tag('strong', 'Jane Wilson' ); // returns a HTML element
+var phone = '1-222-333-4444'; // returns a string
+var contact = _tag('div', name.outerHTML +' '+ phone ); // convert name to a string using outerHTML
+```
+> Use outerHTML to convert tag objects to strings when concatenating with other strings.
+
 ### Creating and Nesting Mutiple Tags
-You can also create multiple elements at the same time by passing an array in as content. You can then nest those elements into another _tag. Now instead of 14 lines of code, you have 2 lines. 
+You can also create multiple elements at the same time by passing in content as an array. You can then nest those elements into another _tag. Now instead of 14 lines of code, you have 2 lines. 
 ```javascript
 var items = _tag('li',['Orange', 'Apple', 'Banana'], {'class':'no-bullet'});
 var foods = _tag('ul', items, {'id':'food-list'});
