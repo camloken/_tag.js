@@ -7,10 +7,18 @@ The _tag( ) function takes 3 parameters, for example _tag( element, content, att
 var hello = _tag('h1', 'Hello World!');
 document.body.appendChild( hello );
 ```
+Output:
+```html
+<h1>Hello World!</h1>
+```
 
 You can attach any attribute you want. The attribute parameter takes an object. The {'key':'value'} pairs should be strings or variables. Here's an example:
 ```javascript
-var button = _tag('button', 'Submit', {'class':'jumbo-btn', 'data-id': productId } );
+var button = _tag('button', 'Submit', {type:'submit', 'class':'jumbo-btn', 'data-id': productId } );
+```
+Output:
+```html
+<button type="submit" class="jumbo-btn" data-id="12345">Submit</button>
 ```
 
 The content parameter can be set to null or an empty string "". Content  can be appened to it later.
