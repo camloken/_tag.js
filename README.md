@@ -26,7 +26,7 @@ The content parameter can be set to null or an empty string "". Content  can be 
 var dataTable = _tag('table', null, {'class':'data-table'} );
 ```
 
-The style attibute is also valid, but as a best practice you should always use a class or id.
+The style attibute is also valid, but as a best practice you should always use a seperate css file.
 ```javascript
 var hello = _tag('h1', 'Hello World!', {'style':'font-family: "Arial", sans-serif; color:red'} );
 ```
